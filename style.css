@@ -10,9 +10,12 @@
 
 html {
     scroll-padding-top: 110px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    width: 100%;
     background: #0a1212;
     overflow-x: hidden;
 }
@@ -1275,77 +1278,78 @@ html {
 
     /* HEADER */
 
-    .home {
-        padding: 17px 15px;
-    }
+   .home {
+    padding: 17px 15px;
+}
 
-    .home>div {
-        justify-content: center;
-        position: relative;
-        padding: 8px;
-    }
+.home > div {
+    justify-content: center;
+    position: relative;
+    padding: 8px;
+}
 
-    .header-logo .logo {
-        font-size: 18px;
-        flex: 1;
-        text-align: center;
-    }
+.header-logo .logo {
+    font-size: 18px;
+    flex: 1;
+    text-align: center;
+}
 
-    .main-nav {
-        display: none;
-    }
+.main-nav {
+    display: none;
+}
 
-    .hamburger {
-        display: flex;
-        position: absolute;
-        right: 350px;
-    }
+.hamburger {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-    .mobile-menu {
-        position: fixed;
-        top: 100;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background: #0a1212f5;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 19;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
+.mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: #0a1212f5;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 19;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
 
-    .mobile-menu.active {
-        max-height: 100vh;
-    }
+.mobile-menu.active {
+    max-height: 100vh;
+}
 
-    .mobile-menu ul {
-        margin-bottom: 130px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
+.mobile-menu ul {
+    margin-bottom: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
 
-    .mobile-menu ul li {
-        width: 100%;
-        border: none;
-        padding: 30px 0;
-        text-align: center;
-    }
+.mobile-menu ul li {
+    width: 100%;
+    border: none;
+    padding: 30px 0;
+    text-align: center;
+}
 
-    .mobile-menu ul li a {
-
-        font-size: 40px;
-        font-weight: 600;
-        color: #fff;
-    }
+.mobile-menu ul li a {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
 
     /* INICIO */
 

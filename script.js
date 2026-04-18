@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
       i++;
       setTimeout(
         escreverOla,
-        typingSpeed + Math.floor(Math.random() * speedVariance),
+        typingSpeed + Math.floor(Math.random() * speedVariance)
       );
     } else {
       ola.innerHTML += '<span style="color: #00fdd3;">!</span>';
@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
       j++;
       setTimeout(
         escreverNome,
-        typingSpeed + Math.floor(Math.random() * speedVariance),
+        typingSpeed + Math.floor(Math.random() * speedVariance)
       );
     } else {
       hygo.innerHTML =
@@ -48,7 +48,34 @@ window.addEventListener("load", function () {
   escreverOla();
 });
 
-// ANIMAÇÂO DO BOTÃO CONTATO
+// HAMBURGER MENU
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+
+// Fechar menu ao clicar em um link
+mobileMenuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+});
+
+// Fechar menu ao fazer scroll
+window.addEventListener("scroll", () => {
+  if (mobileMenu.classList.contains("active")) {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  }
+});
+
+// ANIMAÇÃO DO BOTÃO CONTATO
 
 function toggleContatos() {
   const contatos = document.querySelector(".footer-contatos");
@@ -92,10 +119,10 @@ btnTopo.addEventListener("click", () => {
   });
 });
 
-// ANIMAÇÂO DE REVEAL
+// ANIMAÇÃO DE REVEAL
 
 const observerOptions = {
-  threshold: 0.30,
+  threshold: 0.3,
   rootMargin: "0px 0px -50px 0px",
 };
 
@@ -111,7 +138,7 @@ const revealCallback = (entries) => {
 
 const revealObserver = new IntersectionObserver(
   revealCallback,
-  observerOptions,
+  observerOptions
 );
 
 function initRevealAnimation() {
@@ -121,4 +148,19 @@ function initRevealAnimation() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initRevealAnimation);
+// Chamar mesmo se DOMContentLoaded já passou
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initRevealAnimation);
+} else {
+  initRevealAnimation();
+}
+
+// EFEITO DE BRILHO NOS PROJETOS
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".card-projeto").forEach((card) => {
+    const shine = document.createElement("div");
+    shine.className = "shine";
+    card.appendChild(shine);
+  });
+});

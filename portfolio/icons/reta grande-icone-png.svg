@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 5 124" width="5.0pt" height="124.0pt" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M 0.00 0.00 L 5.00 0.00 L 5.00 124.00 L 0.00 124.00 L 0.00 0.00 Z" id="p0" />
+</defs>
+<g stroke-width="10pt">
+<use stroke="#ffffff" xlink:href="#p0" />
+</g>
+<g>
+<use fill="#ffffff" xlink:href="#p0" />
+</g>
+</svg>
